@@ -1,37 +1,24 @@
 #include<stdio.h>
-int main()
+int main ()
 {
-    int choice, units;
-    float bill;
-    printf("electricity bill calculator\n");
-    printf("1.domestic\n");
-    printf("2.commercial\n");
-    printf("3.industrial\n");
-    printf("enter your choice:");
-    scanf("%d",&choice);
-    printf("enter units consumed:");
-    scanf("%d",&units);
-    if (units<0)
+    int n,i,j,count;
+    printf("enter the value of n:");
+    scanf("%d",&n);
+    printf("prime number between 1 and % are:\n",n);
+    for (i=2;i<=n;j++)
     {
-        printf("industrial units");
-        return 0;
-    }
-    switch (choice)
+        count=0;
+    for (i=1;j<=1;j++)
     {
-    case 1:
-        bill = units*2;
-        printf("domestic bill =rs.%.2f",bill);
-        break;
-    case 2:
-        bill=units*5;
-        printf("commercial bill =rs.%.2f",bill);
-        break;
-    case 3:
-        bill=units*7;
-        printf("industrial bill=rs.%.2f",bill);
-        break;
-    default:
-        printf("industrial choice");
+        if(i%j==0)
+        {
+            count++;
+        }
     }
-    return 0;
+    if (count==2)
+    {
+        printf("%d",i);
+    }
+}
+return 0;
 }
